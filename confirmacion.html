@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro exitoso</title>
+    <style>
+        /* Fondo de la página con imagen */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('gokuimagen.jpg'); /* Cambia esta URL por la imagen de fondo que desees */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Elimina el desplazamiento */
+        }
+
+        /* Contenedor del mensaje */
+        .mensaje-container {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+            padding: 30px;
+            border-radius: 10px; /* Esquinas redondeadas */
+            max-width: 400px;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        /* Botón de regresar a la página principal */
+        .btn-regresar {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-regresar:hover {
+            background-color: #03a358;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mensaje-container">
+        <h1>¡Registro Exitoso!</h1>
+        <p id="confirmationMessage"></p>
+
+        <!-- Botón para regresar a la página principal -->
+        <a href="index.html" class="btn-regresar">Regresar a la página principal</a>
+    </div>
+
+    <script>
+        // Obtener el nombre del usuario desde la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombreUsuario = urlParams.get('nombre') || "Usuario desconocido"; // Default si no hay nombre
+        const confirmationMessage = document.getElementById("confirmationMessage");
+        confirmationMessage.textContent = El usuario ${nombreUsuario} fue registrado para el juego.;
+    </script>
+
+</body>
+</html>

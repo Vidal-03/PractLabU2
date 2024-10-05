@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro DBZ</title>
+    <style>
+        /* Fondo de la página */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('dragonball.jpg'); /*Imagen de fondo de la página*/
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            overflow-y: auto; /* Permitir el desplazamiento vertical */
+        }
+
+        /* Estilo del menú de navegación */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+            padding: 0.9px;
+            text-align: center;
+            position: sticky; /* Lo fija en la parte superior */
+            top: 0; /* Se queda en la parte superior */
+            z-index: 1000; /* Asegura que esté por encima del contenido */
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 30px; /*Margen que hay entre las palabras en la parte superior/inferior y la parte izquierda/derecha*/
+        }
+
+        nav a {
+            color: #009507;
+            text-decoration: none;/*Elimina el subrayado*/
+            font-size: 20px;
+        }
+
+        nav a:hover {/*agrega un estilo cuando el mouse esta encima del texto*/
+            text-decoration: underline;/*agrega un subrayado al texto del enlace cuando el mouse*/
+        }
+
+        /* Estilo para los contenedores de las secciones */
+        .section-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
+            padding: 20px;
+            border-radius: 10px; /* Esquinas redondeadas */
+            color: white;
+            margin: 20px auto; /* Centrado en la página */
+            max-width: 600px; /* Ancho máximo */
+            text-align: left;
+        }
+
+        /* Contenedor del formulario */
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+            padding: 20px;
+            border-radius: 10px; /* Esquinas redondeadas */
+            max-width: 400px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            margin: 50px auto; /* Centrado en la página */
+        }
+
+        /* Estilo para las tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+            color: white;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: none;
+            background-color: #333;
+            color: white;
+        }
+
+        input::placeholder {/*es lo que mostrará el recuadro antes de rellenar para indicar al usuario que debe poner*/
+            color: #aaa;
+        }
+
+        /* Botón de registro */
+        input[type="submit"] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #03a358;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        /* Texto informativo */
+        .info {
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        .info a {
+            color: #04AA6D;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para los títulos de sección */
+        .section h2 {
+            color: #04AA6D;
+            margin-top: 0; /* Eliminar margen superior */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#historia" onclick="mostrarSeccion('historia')">Historia</a></li>
+            <li><a href="#personajes" onclick="mostrarSeccion('personajes')">Personajes</a></li>
+            <li><a href="#peliculas" onclick="mostrarSeccion('peliculas')">Películas</a></li>
+            <li><a href="#registro" onclick="mostrarSeccion('registro')">Registro</a></li>
+        </ul>
+    </nav>
+
+    <div id="historia" class="section-container">
+        <h2>Historia de Dragon Ball</h2>
+        <p>Dragon Ball Z es una serie que continúa la historia de la vida adulta de Son Goku y su hijo Gohan, y que se caracteriza por ser más seria y dramática que su predecesora, Dragon Ball.<br><br>
+        La trama de Dragon Ball Z se desarrolla en torno a los siguientes eventos:<br>
+        <ul type="circle">
+            <li>Goku lucha contra su hermano Raditz, quien ha viajado a la Tierra para descubrir por qué Goku no ha destruido el planeta.</li>
+            <li>Gohan revela sus poderes ocultos contra Raditz.</li>
+            <li>Goku y Raditz mueren en la batalla, pero Raditz advierte que dos Saiyans más poderosos que él están de camino a la Tierra.</li>
+            <li>Los luchadores restantes intentan detener a los Saiyans malignos.</li>
+            <li>Piccolo entrena a Gohan para que pueda usar su nuevo poder.</li>
+            <li>Goku se entrena en el secreto del Kaio-ken para poder ayudar a sus amigos.</li>
+        </ul>    <br>
+        La serie cuenta con varias sagas, entre ellas:<br>
+        <ul type="circle">
+            <li>Saga de los Saiyajin</li>
+            <li>Saga de Freezer</li>
+            <li>Saga de Garlic Jr.</li>
+            <li>Saga de los Androides</li>
+            <li>Saga de Cell</li>
+            <li>Saga del torneo del otro mundo</li>
+            <li>Saga del 25.° Torneo de las Artes Marciales</li>
+            <li>Saga de Majin Boo</li> 
+        </ul>
+        La serie termina con la saga de Buu, en la que Goku y Vegeta, con la ayuda de Satan y Majin Buu, consiguen acabar con el monstruo rosa.</p>
+    </div>
+
+    <div id="personajes" class="section-container">
+        <h2>Personajes del Juego</h2>
+        <ul>
+            <li>Goku</li>
+            <li>Vegeta</li>
+            <li>Gohan</li>
+            <li>Piccolo</li>
+            <li>krilin</li>
+            <li>Yamcha</li>
+            <li>Trunks</li>
+            <li>Androide 18</li>
+            <li>Androide 17</li>
+            <li>Goten</li>
+            <li>Ten Shin Han</li>
+            <li>Bulma</li>
+            <li>Raditz</li>
+            <li>Nappa</li>
+            <li>Frieza</li>
+            <li>Cell</li>
+            <li>Majin Buu</li>
+        </ul>
+    </div>
+
+    <div id="peliculas" class="section-container">
+        <h2>Películas de Dragon Ball Z</h2>
+        <ul>
+            <li>Dragon Ball Z: El más fuerte del mundo</li>
+            <li>Dragon Ball Z: La Súper batalla</li>
+            <li>Dragon Ball Z: El súper guerrero Son Goku</li>
+            <li>Dragon Ball Z: Los mejores rivales</li>
+            <li>Dragon Ball Z: Guerreros de fuerza ilimitada</li>
+            <li>Dragon Ball Z: Los tres grandes super saiyans</li>
+            <li>Dragon Ball Z: Estalla el duelo</li>
+            <li>Dragon Ball Z: Los guerreros de plata</li>
+            <li>Dragon Ball Z: El regreso de Broly</li>
+            <li>Dragon Ball Z: El combate definitivo</li>
+        </ul>
+    </div>
+
+    <div id="registro" class="form-container">
+        <h1>¡REGÍSTRATE Y DIVIÉRTETE!</h1>
+        <h5>Se uno de los primeros en probar el juego nuevo</h3>
+        <form action="confirmacion.html" method="get">
+            <table>
+                <tr>
+                    <td>Fecha de nacimiento</td>
+                    <td>
+                        <input type="date" name="fecha" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="nombre">Nombre del Usuario:</label></td>
+                    <td><input type="text" id="nombre" name="nombre" placeholder="No utilices tu nombre real" required></td>
+                </tr>
+                <tr>
+                    <td>Contraseña</td>
+                    <td>
+                        <input type="password" name="password" placeholder="Por lo menos 8 caracteres" minlength="8" required>
+                        <input type="checkbox" onclick="mostrarContrasena()"> Mostrar contraseña
+                    </td>
+                </tr>
+                <tr>
+                    <td>Género (opcional)</td>
+                    <td>
+                        <select name="genero">
+                            <option value="">Seleccionar...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Registrarse">
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+    </div>
+
+    <script>
+        function mostrarContrasena() {
+            var x = document.getElementsByName("password")[0];
+            x.type = (x.type === "password") ? "text" : "password";
+        }
+
+        function mostrarSeccion(seccion) {
+            // Solo hacemos scroll a la sección seleccionada
+            const topPos = document.getElementById(seccion).offsetTop;
+            window.scrollTo({ top: topPos, behavior: 'smooth' }); // Desplazamiento suave
+        }
+    </script>
+
+</body>
+</html>
